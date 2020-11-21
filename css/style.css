@@ -3,5 +3,34 @@
 }
 
 .container {
+    width: 100%;
+    max-width: 990px;
     margin: 0 auto;
 }
+
+a:visited {
+    color: inherit;
+}
+
+/* Header */
+.heading-container {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.image-photo {
+    border-radius: 50%;
+}
+ul.contacts-list>li {
+    display: inline;
+}
+.header-caption-left-container {
+    display: flex;
+}
+
+
+
+
+

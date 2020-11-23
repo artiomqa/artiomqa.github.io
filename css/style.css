@@ -1,36 +1,139 @@
-* {
-    box-sizing: border-box;
-}
+/* Common styles */
+    * {
+        box-sizing: border-box;
+    }
+    /* Установил контейнер с максимальной шириной в 990 пикселей, чтоб он занимал максимальную ширину экрана и располагался по центру */
+    .container {
+        width: 100%;
+        max-width: 990px;
+        margin: 0 auto;
+    }
 
-.container {
-    width: 100%;
-    max-width: 990px;
-    margin: 0 auto;
-}
+    /* Убрал подчеркивание для всех ссылок - они на всей странице имеют вид без подчеркивания UPD психанул и задал всем ссылкам inline-flex просто для того, чтоб можно было им задавать марджины и т.д., не вижу, почему бы и нет. UPD убрал, т.к. не применимо для случаев с иконками. Иконки оформлены псевдоэлементами ::before и ::after, и на них не срабатывает свойство text-decoration.*/
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-a:visited {
-    color: inherit;
-}
+    /* У очень многих ссылок при наведении появляется подчеркивание. За счет низкого веса селектора по тегу можно добавить всем подчеркивание, а потом отдельным ссылкам вроде кнопки переделать поведение, т.к. селектор по классу имеет более высокий вес.
+    ПРОБЛЕМА: конфликт со стилизацией по селектору a.contacts-links  */
+    a:hover {
+        text-decoration: underline;
+    }
 
+    /* Установил для всех ссылок, чтоб они не меняли цвет после посещения  */
+    a:visited {
+        color: inherit;
+    }
+
+
+/* СТИЛИЗАЦИЯ ВСЕГО ТЕКСТА */
+
+    body {
+        font-family: 'Lato', arial, sans-serif;/* ПРОБЛЕМА: Не подключился шрифт Lato */
+        color: #434343;
+        background-color: #dae3e7;
+        font-size: 16px;
+    }
+    /* Стилизация текста */
+    /* ВСЕ ЗАГОЛОВКИ - шрифтом Montserrat с весом линий 700 */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: #49515a;
+
+    }
 /* Header */
-.heading-container {
-    display: flex;
-    padding-top: 20px;
-    justify-content: space-between;
-    align-items: center;
-}
+    header {
+        background-color: #f5f5f5; /* У хэдера цвет не как у body; */
+    }
+    /* Добавил в контейнер хэдера свойство флекс, чтоб разбросать блок с картинкой и надписями влево, а кнопку - вправо */
+    .header-container {
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Сделал свою картинку круглой */
+    img.image-photo {
+        border-radius: 50%;
+    }
+    /* Заставил все li-шки списка вести себя как инлайновые элементы */
+    ul.messengers-list li {
+        display: inline-flex;
+    }
+    /* Контейнер, содержащий картинку и подписи, отображает элементы рядом, а не друг под другом */
+    .header-caption-left-container {
+        display: flex;
+    }
 
-img.image-photo {
-    border-radius: 50%;
-}
-ul.contacts-list>li {
-    display: inline;
-}
-.header-caption-left-container {
-    display: flex;
-}
+    /* Стилизация текста в хэдере (в диве.title */
+    .title {
+        padding-top: 10px;
+        padding-left: 10px;
+        line-height: 1.5;
+    }
+    /* Стилизация подзаголовка под именем */
+    .prof-name {
+       color: #b0b7bf;
+       font-weight: 400; 
+    }
+    /* Стилизация иконок (вернее, ссылок, в которых содержатся иконки) */
+    /* Сначала застилизовал по тегу "i" - не пошло http://prntscr.com/vonjwz */
+    /* .contacts-list i{
+        width: 36px;
+        height: 36px;
+    } */
+    .contacts-links {
+        font-size: 16px;
+        margin-right: 3px;
+        transition: 0.4s ease-out;
+    }
+    /* TODO: сделать одинаковый серый цвет иконкам */
+    /* РЕШИЛ: Почему не срабатывает отмена подчеркивания при наведении? У селектора большая специфичность.
+    ОТВЕТ: https://stackoverflow.com/questions/1238881/text-decoration-and-the-after-pseudo-element-revisited
+    ВОПРОС: Является ли идиотизмом перебор селекторов, пытаясь выбрать селектор выше уровнем, чем "a"? Безуспешные попытки ниже.
+    
+    */
+    /* a.contact-links:hover {
+        text-decoration: none;
+    } */
+
+    /* .messengers-list li:hover {
+        text-decoration: none;
+    } */
+
+    /* пробую скрыть декорацию для ::before  */
+
+    .contacts-links:hover {
+        color: #778492;
+        transition: 0.4s ease-out;
+    }
+    /* СТИЛИЗАЦИЯ КОНТАКТ-КНОПКИ */
+    .contact-me-button {
+        padding: 7px 15px;
+        margin: 0 5px;
+        background-color: #54ba4e;
+        color: #fff;
+        text-transform: uppercase;
+        transition: 0.4s ease-out;
+    }
+    a.contact-me-button>i {
+        margin-right: 5px;
+    }
+    .contact-me-button:hover, .contact-me-button:focus {
+        text-decoration: none;
+        background-color: #49ac43;
+        transition: 0.4s ease-out;
+    }
+    
 
 
+/* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */
+@media screen and (min-width: 768px) {
+.container {
+    width: 750px;}
+}
 
 
 

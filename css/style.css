@@ -50,7 +50,7 @@
     /* Добавил в контейнер хэдера свойство флекс, чтоб разбросать блок с картинкой и надписями влево, а кнопку - вправо */
     .header-container {
         display: flex;
-        padding-top: 20px;
+        padding: 20px 0;
         justify-content: space-between;
         align-items: center;
     }
@@ -84,7 +84,10 @@
         width: 36px;
         height: 36px;
     } */
+
+    /* ПРОБЛЕМА С ИКОНКАМИ 24.11 ТУТ, строки HTML 28-36. Селектор ниже стилизует li-шки с этим классом */
     .contacts-links {
+        color: #dae3e7; /* Данное свойство сработало только на иконке скайп (строка 31 index.html) */
         font-size: 16px;
         margin-right: 3px;
         transition: 0.4s ease-out;
@@ -103,7 +106,7 @@
         text-decoration: none;
     } */
 
-    /* пробую скрыть декорацию для ::before  */
+    /* пробовал скрыть декорацию для ::before  */
 
     .contacts-links:hover {
         color: #778492;
@@ -112,6 +115,7 @@
     /* СТИЛИЗАЦИЯ КОНТАКТ-КНОПКИ */
     .contact-me-button {
         padding: 7px 15px;
+        border-radius: 4px;
         margin: 0 5px;
         background-color: #54ba4e;
         color: #fff;
@@ -130,7 +134,7 @@
 
 
 /* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 .container {
     width: 750px;}
 }

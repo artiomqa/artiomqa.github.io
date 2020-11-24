@@ -87,7 +87,6 @@
 
     /* ПРОБЛЕМА С ИКОНКАМИ 24.11 ТУТ, строки HTML 28-36. Селектор ниже стилизует li-шки с этим классом */
     .contacts-links {
-        color: #dae3e7; /* Данное свойство сработало только на иконке скайп (строка 31 index.html) */
         font-size: 16px;
         margin-right: 3px;
         transition: 0.4s ease-out;
@@ -131,6 +130,10 @@
         transition: 0.4s ease-out;
     }
     
+/* MAIN STYLING */
+/* PRIMARY (LEFT) COLUMN */
+/* SECONDARY (RIGHT) COLUMN */
+
 
 
 /* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */

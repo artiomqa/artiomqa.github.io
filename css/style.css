@@ -138,16 +138,31 @@
     justify-content: space-between;
 }
 
+/* Стилизовал зеленые ссылки (как, например, в секции San Francisco */
+.green-link {
+    color: #54ba4e;
+    transition: 0.4s ease-out;
+}
+
+.green-link:hover, .green-link:focus {
+    color: #49ac43;
+    transition: 0.4s ease-out;
 /* СТИЛИЗАЦИЯ ТЕКСТА */
 
 h2.section-heading {
-    padding: 16px 0;
     font-size: 24px;
+}
+
+/* Добавил паддинг, который свойственны всем хэдерам в мейне. Паддинг, т.к. хочу, чтобы это было применимо также и для ссылок-заголовков, чтоб увеличить их кликабельную зону */
+
+.main-header {
+    padding-bottom: 16px;
 }
 
 .project-text {
     line-height: 1.5;
 }
+
 
 /* PRIMARY (LEFT) COLUMN OF MAIN */
 .primary-column {
@@ -160,6 +175,15 @@ h2.section-heading {
     padding: 30px;
     text-align: left;
     margin: 30px 0;
+}
+/* Стилизация featured */
+.project-photo-featured {
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.featured-heading {
+    font-size: 20px;
 }
 
 /* SECONDARY (RIGHT) COLUMN OF MAIN*/

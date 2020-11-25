@@ -2,10 +2,10 @@
     * {
         box-sizing: border-box;
     }
-    /* Установил контейнер с максимальной шириной в 990 пикселей, чтоб он занимал максимальную ширину экрана и располагался по центру */
+    /* Установил контейнер с максимальной шириной в 1360 пикселей, чтоб он занимал максимальную ширину экрана и располагался по центру */
     .container {
         width: 100%;
-        max-width: 990px;
+        max-width: 1360px;
         margin: 0 auto;
     }
 
@@ -87,7 +87,7 @@
 
     /* ПРОБЛЕМА С ИКОНКАМИ 24.11 ТУТ, строки HTML 28-36. Селектор ниже стилизует li-шки с этим классом */
     .contacts-links {
-        color: #dae3e7; /* Данное свойство сработало только на иконке скайп (строка 31 index.html) */
+	    color: #dae3e7;
         font-size: 16px;
         margin-right: 3px;
         transition: 0.4s ease-out;
@@ -131,6 +131,36 @@
         transition: 0.4s ease-out;
     }
     
+/* MAIN STYLING */
+.main-wrapper {
+    margin: 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* PRIMARY (LEFT) COLUMN OF MAIN */
+.primary-column {
+    width: 65%;
+    max-width: 870px;
+}
+/* Стилизация подразделов */
+.section-main {
+    background-color: #fff;
+    padding: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+/* SECONDARY (RIGHT) COLUMN OF MAIN*/
+.secondary-column {
+    width: 30%;
+    max-width: 420px;
+}
+
+.section-secondary {
+    background-color: #fff;
+    padding: 30px;
+    text-align: left;
+}
 
 
 /* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */

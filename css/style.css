@@ -148,6 +148,12 @@
     color: #49ac43;
     transition: 0.4s ease-out;
 }
+
+/* Стилизовал серые ссылки */
+.gray-link {
+    color: #778492;
+}
+
 /* СТИЛИЗАЦИЯ ТЕКСТА */
 
 h2.section-heading {
@@ -156,12 +162,13 @@ h2.section-heading {
 
 /* Добавил паддинг, который свойственны всем хэдерам в мейне. Паддинг, т.к. хочу, чтобы это было применимо также и для ссылок-заголовков, чтоб увеличить их кликабельную зону */
 
-.main-header {
+.main-heading {
     padding-bottom: 16px;
 }
 
 .project-text {
     line-height: 1.5;
+    margin-bottom: 16px;
 }
 /* Стилизация подразделов подразделов мейна (и левой, и правой колонки*/
 
@@ -186,7 +193,12 @@ h2.section-heading {
 }
 .featured-heading {
     font-size: 20px;
+    text-align: center;
+    font-weight: 700;
 }
+
+/* Стилизация кнопки Back my project */
+
 
 /* SECONDARY (RIGHT) COLUMN OF MAIN*/
 .secondary-column {
@@ -208,6 +220,31 @@ h2.section-heading {
 .icon-margin-right {
     margin-right: 5px;
 }
+
+.button-back-my-project {
+    display: inline-flex;
+    padding: 7px 15px;
+    border-radius: 4px;
+    margin: 0 auto;
+    background-color: #479fc8;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.4s ease-out;
+}
+a.button-back-my-project>i {
+    margin-right: 5px;
+}
+.button-back-my-project:hover, .button-back-my-project:focus {
+    text-decoration: none;
+    background-color: #3839bd;
+    transition: 0.4s ease-out;
+}
+
+.latest .center-block {
+        display: flex;
+        justify-items: center;
+}
+
 
 /* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */
 @media screen and (max-width: 768px) {

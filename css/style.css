@@ -138,18 +138,30 @@
     justify-content: space-between;
 }
 
+/* СТИЛИЗАЦИЯ ТЕКСТА */
+
+h2.section-heading {
+    padding: 16px 0;
+    font-size: 24px;
+}
+
+.project-text {
+    line-height: 1.5;
+}
+
 /* PRIMARY (LEFT) COLUMN OF MAIN */
 .primary-column {
     width: 65%;
     max-width: 870px;
 }
-/* Стилизация подразделов */
+/* Стилизация подразделов левой основной колонки*/
 .section-main {
     background-color: #fff;
     padding: 30px;
     text-align: left;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
+
 /* SECONDARY (RIGHT) COLUMN OF MAIN*/
 .secondary-column {
     width: 30%;

@@ -133,7 +133,7 @@
     
 /* MAIN STYLING */
 .main-wrapper {
-    margin: 0 60px;
+    margin: inherit 60px;
     display: flex;
     justify-content: space-between;
 }
@@ -163,20 +163,21 @@ h2.section-heading {
 .project-text {
     line-height: 1.5;
 }
+/* Стилизация подразделов подразделов мейна (и левой, и правой колонки*/
 
-
-/* PRIMARY (LEFT) COLUMN OF MAIN */
-.primary-column {
-    width: 65%;
-    max-width: 870px;
-}
-/* Стилизация подразделов левой основной колонки*/
 .section-main {
     background-color: #fff;
     padding: 30px;
     text-align: left;
     margin: 30px 0;
 }
+
+/* PRIMARY (LEFT) COLUMN OF MAIN */
+.primary-column {
+    width: 65%;
+    max-width: 870px;
+}
+
 /* Стилизация featured */
 .project-photo-featured {
     height: auto;
@@ -199,6 +200,14 @@ h2.section-heading {
     text-align: left;
 }
 
+.info p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.icon-margin-right {
+    margin-right: 5px;
+}
 
 /* МЕДИАЗАПРОС, чтоб смотрелось нормально на полэкрана */
 @media screen and (max-width: 768px) {

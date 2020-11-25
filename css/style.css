@@ -147,6 +147,7 @@
 .green-link:hover, .green-link:focus {
     color: #49ac43;
     transition: 0.4s ease-out;
+}
 /* СТИЛИЗАЦИЯ ТЕКСТА */
 
 h2.section-heading {
